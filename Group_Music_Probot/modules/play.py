@@ -544,7 +544,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/6fafdf6d8bd439b47f94c.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -587,8 +587,8 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
                 ],
                 [
                     InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -674,8 +674,8 @@ async def play(_, message: Message):
                         InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                     ],
                     [
-                        InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                        InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                        InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
                     ],
                     [
                         InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -1100,8 +1100,8 @@ async def lol_cb(b, cb):
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
