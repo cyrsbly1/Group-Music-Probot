@@ -22,7 +22,7 @@ Try the /help Command below to know my abilities.
             [
                 [
                     InlineKeyboardButton(
-                        "👥 𝙰𝚍𝚍 Group Music Probot 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙 👥", url="https://t.me/KatarinaMusixBot?startgroup=true")
+                        "👥 Add Katarina to your Group! 👥", url="https://t.me/KatarinaMusixBot?startgroup=true")
                   ],[
                     InlineKeyboardButton(
                         "Katarina's Channel Updates", url="https://t.me/katarinamusicbotupdates"
@@ -32,7 +32,7 @@ Try the /help Command below to know my abilities.
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        " Katarina's Assistant ", url="https://t.me/KatarinaMusixUserbot"
+                        " Katarina's Assistant (Add me also!)", url="https://t.me/KatarinaMusixUserbot"
                     )],
             ]
         ),
