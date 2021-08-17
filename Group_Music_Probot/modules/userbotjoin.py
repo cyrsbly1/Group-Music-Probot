@@ -14,21 +14,21 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
+            "<b>Add me as admin of yor group first!</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Group Music Probot"
+        user.first_name = "Katarina"
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "I joined here as you requested")
+        await USER.send_message(message.chat.id, "__Ready for trouble?__")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>Userbot already in your chat</b>",
         )
     except Exception as e:
         print(e)
@@ -38,7 +38,7 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your chat</b>",
+        "<b>Userbot joined your chat</b>",
     )
 
 
@@ -95,11 +95,11 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Group Music Probot"
+        user.first_name = "Katarina"
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "I joined here as you requested")
+        await USER.send_message(message.chat.id, "__Ready for trouble?__")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>helper already in your channel</b>",
