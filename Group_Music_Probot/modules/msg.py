@@ -57,30 +57,7 @@ f"""
 """,
         
 f"""
-**=>> Channel Music Play 🛠**
-
-⚪️ For linked group admins only:
-
-- /cplay [song name] - play song you requested
-- /csplay [song name] - play song you requested via jio saavn
-- /cplaylist - Show now playing list
-- /cccurrent - Show now playing
-- /cplayer - open music player settings panel
-- /cpause - pause song play
-- /cresume - resume song play
-- /cskip - play next song
-- /cend - stop music play
-- /userbotjoinchannel - invite assistant to your chat
-
-channel is also can be used instead of c ( /cplay = /channelplay )
-
-⚪️ If you donlt like to play in linked group:
-
-1) Get your channel ID.
-2) Create a group with tittle: Channel Music: your_channel_id
-3) Add bot as Channel admin with full perms
-4) Add @KatarinaMusixUserbot to the channel as an admin.
-5) Simply send commands in your group.
+**More features coming soon!**
 """,
 
 f"""
@@ -89,16 +66,5 @@ f"""
 - /musicplayer [on/off]: Enable/Disable Music player
 - /admincache: Updates admin info of your group. Try if bot isn't recognize admin
 - /userbotjoin: Invite @KatarinaMusixUserbot Userbot to your chat
-- /auth [reply to user] - Authorize User
-- /deauth [reply to user] - DeAuthorize user
-Authorized users can execute admin commands in authorized group
-
-**=>> Commands for Sudo Users ⚔️**
-
- - /userbotleaveall - remove assistant from all chats
- - /gcast <reply to message> - globally brodcast replied message to all chats
- - /pmpermit [on/off] - enable/disable pmpermit message
-*Sudo Users can execute any command in any groups
-
 """
       ]
