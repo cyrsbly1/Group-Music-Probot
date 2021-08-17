@@ -45,7 +45,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("You ain't allowed!", show_alert=True)
+            await cb.answer("Group admins only!", show_alert=True)
             return
 
     return decorator
@@ -126,7 +126,7 @@ async def playlist(client, message):
         return    
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text("Player is idle")
+        await message.reply_text("Player is sleeping.")
     temp = []
     for t in queue:
         temp.append(t)
@@ -534,8 +534,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Menu (Admins only) ", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -583,8 +583,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                    InlineKeyboardButton("Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("Menu (Admins only) ", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
@@ -670,8 +670,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                        InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                        InlineKeyboardButton("Playlist", callback_data="playlist"),
+                        InlineKeyboardButton("Menu (Admins only)", callback_data="menu"),
                     ],
                     [
                         InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
@@ -824,8 +824,8 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [
-                InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                 InlineKeyboardButton(text="Bot Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                 InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -990,8 +990,8 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("Playlist", callback_data="playlist"),
+                InlineKeyboardButton("Menu (Admins only) ", callback_data="menu"),
             ],
             [
                 InlineKeyboardButton(text="Join Updates Channel", url=f"https://t.me/{updateschannel}")
@@ -1062,7 +1062,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
         return
-    await cb.message.edit("Hang On... Player Starting")
+    await cb.message.edit("Processing...")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1096,12 +1096,12 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                InlineKeyboardButton("Playlist", callback_data="playlist"),
+                InlineKeyboardButton("Menu (Admins only)", callback_data="menu"),
             ],
             [
-                    InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
-                    InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
+                    InlineKeyboardButton(text="Bot Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                    InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
