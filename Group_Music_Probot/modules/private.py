@@ -6,32 +6,33 @@ from Group_Music_Probot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SU
 
 logging.basicConfig(level=logging.INFO)
 
-GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/70008107133ae8f4d1f1f.jpg"
+GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/6fafdf6d8bd439b47f94c.jpg"
 
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_photo(GROUP_MUSIC_PROBOT_IMG)
     await message.reply_text(
-        f"""**Hey, I'm {BOT_NAME} 🎵
-        
-I am Group Music Probot, I Am an Advance And Powerful Telegram Groups Voice Chat Music Bot.
+        f"""Hey, I'm **Katarina** 🎵
+I can play music in your group's voice call. 
+Add me to your group and play music freely!
+
 Try the /help Command below to know my abilities.
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "👥 𝙰𝚍𝚍 Group Music Probot 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙 👥", url="https://t.me/Group_Music_ProBot?startgroup=true")
+                        "👥 𝙰𝚍𝚍 Group Music Probot 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙 👥", url="https://t.me/KatarinaMusixBot?startgroup=true")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Music Lovers 💬", url="https://t.me/HindiKDrama"
+                        "Katarina's Channel Updates", url="https://t.me/katarinamusicbotupdates"
                     ),
                     InlineKeyboardButton(
-                        "🙋 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝙲𝚑𝚊𝚝 🙋", url="https://t.me/Black_Knights_Union_Support"
+                        "𝚂𝚞𝚙𝚙𝚘𝚛𝚝", url="https://t.me/ppnaravxt_bot"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "💁 Assistant 💁", url="https://t.me/Group_Music_Pro"
+                        " Katarina's Assistant ", url="https://t.me/KatarinaMusixUserbot"
                     )],
             ]
         ),
@@ -90,7 +91,7 @@ def map(pos):
             [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = '🛠 Bot Owner', url=f"https://t.me/ppnaravxt")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
