@@ -3,23 +3,21 @@ from Group_Music_Probot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SU
 
 class Messages():
       START_MSG = """
-**Hello 👋 [{}](tg://user?id={})!**
+Hey, I'm Katarina 🎵
+I can play music in your group's voice call. 
+Add me to your group and play music freely!
 
-🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels.
-
-✅ Send me /help for more info.
+Try the /help Command below to know my abilities.
 """
       
       HELP_MSG = [
         ".",
 f"""
-**Hey 👋 Welcome back to {PROJECT_NAME}
+Hey, I'm Katarina 🎵
+I can play music in your group's voice call. 
+Add me to your group and play music freely!
 
-⚪️ {PROJECT_NAME} can play music in your group's voice chat as well as channel voice chats
-
-⚪️ Assistant name >> @{ASSISTANT_NAME}
-
-Click next for instructions**
+Try the /help Command below to know my abilities.
 """,
 
 f"""
@@ -28,7 +26,7 @@ f"""
 1) Make bot admin (Group and in channel if use cplay)
 2) Start a voice chat
 3) Try /play [song name] for the first time by an admin
-*) If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry
+*) If userbot joined enjoy music, If not add @KatarinaMusixUserbot to your group and retry
 
 **For Channel Music Play**
 1) Make me admin of your channel 
@@ -81,7 +79,7 @@ channel is also can be used instead of c ( /cplay = /channelplay )
 1) Get your channel ID.
 2) Create a group with tittle: Channel Music: your_channel_id
 3) Add bot as Channel admin with full perms
-4) Add @{ASSISTANT_NAME} to the channel as an admin.
+4) Add @KatarinaMusixUserbot to the channel as an admin.
 5) Simply send commands in your group.
 """,
 
@@ -90,7 +88,7 @@ f"""
 
 - /musicplayer [on/off]: Enable/Disable Music player
 - /admincache: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
+- /userbotjoin: Invite @KatarinaMusixUserbot Userbot to your chat
 - /auth [reply to user] - Authorize User
 - /deauth [reply to user] - DeAuthorize user
 Authorized users can execute admin commands in authorized group
