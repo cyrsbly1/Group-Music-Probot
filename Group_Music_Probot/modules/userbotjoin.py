@@ -34,7 +34,6 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @Group_Music_Probot to your Group and try again</b>",
         )
         return
     await message.reply_text(
@@ -102,17 +101,16 @@ async def addcchannel(client, message):
         await USER.send_message(message.chat.id, "__Ready for trouble?__")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your channel</b>",
+            "<b>Helper already in your channel</b>",
         )
         return
     except Exception as e:
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @Group_Music_Probot to your Group and try again</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your channel</b>",
+        "<b>Helper userbot joined your channel</b>",
     )
     
