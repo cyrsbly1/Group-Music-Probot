@@ -41,7 +41,7 @@ Try the /help Command below to know my abilities.
 
     
     
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("ping") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
         f"""*💜 {PROJECT_NAME} is online**""",
