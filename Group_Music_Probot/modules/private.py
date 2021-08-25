@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/6fafdf6d8bd439b47f94c.jpg"
 
-@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
+@Client.on_message(filters.command("sstart") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_photo(GROUP_MUSIC_PROBOT_IMG)
     await message.reply_text(
