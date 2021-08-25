@@ -22,7 +22,7 @@ Try the /help Command below to know my abilities.
             [
                 [
                     InlineKeyboardButton(
-                        "👥 Add Katarina to your Group! 👥", url="https://t.me/KatarinaMusixBot?startgroup=true")
+                        "Follow Mork's Channel!", url="https://t.me/saibobo")
                   ],[
                     InlineKeyboardButton(
                         "Katarina's Channel Updates", url="https://t.me/katarinamusicbotupdates"
