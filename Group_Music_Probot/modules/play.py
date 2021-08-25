@@ -1100,7 +1100,7 @@ async def lol_cb(b, cb):
                 InlineKeyboardButton("Menu (Admins only)", callback_data="menu"),
             ],
             [
-                    InlineKeyboardButton(text="Bot Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
+                    InlineKeyboardButton(text="Mork's Channel", url=f"https://t.me/saibuboo"),
                     InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
             ],
             [
