@@ -22,17 +22,17 @@ Try the /help Command below to know my abilities.
             [
                 [
                     InlineKeyboardButton(
-                        "Follow Mork's Channel!", url="https://t.me/saibobo")
+                        "Follow Mork's Channel!", url="https://t.me/saibuboo")
                   ],[
                     InlineKeyboardButton(
-                        "Katarina's Channel Updates", url="https://t.me/katarinamusicbotupdates"
+                        "Updates", url="https://t.me/katarinamusicbotupdates"
                     ),
                     InlineKeyboardButton(
                         "𝚂𝚞𝚙𝚙𝚘𝚛𝚝", url="https://t.me/ppnaravxt_bot"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        " Katarina's Assistant (Add me also!)", url="https://t.me/KatarinaMusixUserbot"
+                        "Bot's Assistant", url="https://t.me/KatarinaMusixUserbot"
                     )],
             ]
         ),
