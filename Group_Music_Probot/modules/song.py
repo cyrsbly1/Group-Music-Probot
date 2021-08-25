@@ -22,7 +22,7 @@ from Group_Music_Probot.config import DURATION_LIMIT
 from Group_Music_Probot.modules.play import arq
 
 
-@Client.on_message(filters.command("song") & ~filters.channel)
+@Client.on_message(filters.command("sxxng") & ~filters.channel)
 def song(client, message):
 
     user_id = message.from_user.id
