@@ -6,7 +6,7 @@ from Group_Music_Probot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SU
 
 logging.basicConfig(level=logging.INFO)
 
-GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/6fafdf6d8bd439b47f94c.jpg"
+GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/ed46a60b02aa042a092d2.png"
 
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
