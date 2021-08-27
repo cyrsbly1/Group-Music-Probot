@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/6fafdf6d8bd439b47f94c.jpg"
 
-@Client.on_message(filters.command("sstart") & filters.private & ~filters.channel)
+@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_photo(GROUP_MUSIC_PROBOT_IMG)
     await message.reply_text(
@@ -22,7 +22,7 @@ Try the /help Command below to know my abilities.
             [
                 [
                     InlineKeyboardButton(
-                        "Follow Mork's Channel!", url="https://t.me/saibuboo")
+                        "Add Katarina Music to your group!", url="https://t.me/KatarinaMusic_Bot?startgroup=true")
                   ],[
                     InlineKeyboardButton(
                         "Updates", url="https://t.me/katarinamusicbotupdates"
@@ -32,7 +32,7 @@ Try the /help Command below to know my abilities.
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "Bot's Assistant", url="https://t.me/KatarinaMusixUserbot"
+                        "Follow Mork's Channel!", url="https://t.me/saibuboo"
                     )],
             ]
         ),
@@ -49,7 +49,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat 💬", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "💬 Support 💬", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
