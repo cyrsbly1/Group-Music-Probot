@@ -28,7 +28,7 @@ Try the /help Command below to know my abilities.
                         "Updates", url="https://t.me/katarinamusicbotupdates"
                     ),
                     InlineKeyboardButton(
-                        "𝚂𝚞𝚙𝚙𝚘𝚛𝚝", url="https://t.me/chimon_nnnnn"
+                        "Owner", url="https://t.me/chimon_nnnnn"
                     )
                 ],[ 
                     InlineKeyboardButton(
