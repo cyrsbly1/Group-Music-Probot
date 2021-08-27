@@ -166,7 +166,7 @@ def updated_stats(chat, queue, vol=100):
 
 
 def r_ply(type_):
-    if type_ == "p":
+    if type_ == "play":
         pass
     else:
         pass
@@ -218,7 +218,7 @@ async def settings(client, message):
             await message.reply(stats, reply_markup=r_ply("pause"))
 
         else:
-            await message.reply(stats, reply_markup=r_ply("p"))
+            await message.reply(stats, reply_markup=r_ply("play"))
     else:
         await message.reply("No VC instances running in this chat")
 
@@ -327,10 +327,10 @@ async def m_cb(b, cb):
 
             await cb.answer("Music Paused!")
             await cb.message.edit(
-                updated_stats(m_chat, qeue), reply_markup=r_ply("p")
+                updated_stats(m_chat, qeue), reply_markup=r_ply("play")
             )
 
-    elif type_ == "p":
+    elif type_ == "play":
         if (chet_id not in callsmusic.pytgcalls.active_calls) or (
             callsmusic.pytgcalls.active_calls[chet_id] == "playing"
         ):
@@ -441,7 +441,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("p") & other_filters)
+@Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
