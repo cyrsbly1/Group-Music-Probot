@@ -166,7 +166,7 @@ def updated_stats(chat, queue, vol=100):
 
 
 def r_ply(type_):
-    if type_ == "play":
+    if type_ == "p":
         pass
     else:
         pass
@@ -218,7 +218,7 @@ async def settings(client, message):
             await message.reply(stats, reply_markup=r_ply("pause"))
 
         else:
-            await message.reply(stats, reply_markup=r_ply("play"))
+            await message.reply(stats, reply_markup=r_ply("p"))
     else:
         await message.reply("No VC instances running in this chat")
 
@@ -299,7 +299,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
+    filters.regex(pattern=r"^(p|pause|skip|leave|puse|resume|menu|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -327,10 +327,10 @@ async def m_cb(b, cb):
 
             await cb.answer("Music Paused!")
             await cb.message.edit(
-                updated_stats(m_chat, qeue), reply_markup=r_ply("play")
+                updated_stats(m_chat, qeue), reply_markup=r_ply("p")
             )
 
-    elif type_ == "play":
+    elif type_ == "p":
         if (chet_id not in callsmusic.pytgcalls.active_calls) or (
             callsmusic.pytgcalls.active_calls[chet_id] == "playing"
         ):
@@ -342,7 +342,7 @@ async def m_cb(b, cb):
                 updated_stats(m_chat, qeue), reply_markup=r_ply("pause")
             )
 
-    elif type_ == "playlist":
+    elif type_ == "pl":
         queue = que.get(cb.message.chat.id)
         if not queue:
             await cb.message.edit("Player is idle")
@@ -406,7 +406,7 @@ async def m_cb(b, cb):
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
-    elif type_ == "skip":
+    elif type_ == "s":
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.pytgcalls.active_calls:
@@ -441,7 +441,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("p") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
