@@ -119,7 +119,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-@Client.on_message(filters.command("playlist") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("pl") & filters.group & ~filters.edited)
 async def playlist(client, message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -198,7 +198,7 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)
     else:
-        await message.reply("No VC instances running in this chat")
+        await message.reply("No VC instances running in this chat.")
 
 
 @Client.on_message(filters.command("player") & filters.group & ~filters.edited)
@@ -345,7 +345,7 @@ async def m_cb(b, cb):
     elif type_ == "pl":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("Player is idle")
+            await cb.message.edit("Player is idle.")
         temp = []
         for t in queue:
             temp.append(t)
