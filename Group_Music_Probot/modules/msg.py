@@ -37,34 +37,29 @@ f"""
 
 **=>> Song Playing 🎧**
 
-- /play: Play the requestd song
-- /play [yt url] : Play the given yt url
-- /play [reply yo audio]: Play replied audio
+- /p: Play the requestd song
+- /p [yt url] : Play the given yt url
+- /p [reply yo audio]: Play replied audio
 - /splay: Play song via jio saavn
 - /ytplay: Directly play song via Youtube Music
 
 **=>> Playback ⏯**
 
 - /player: Open Settings menu of player
-- /skip: Skips the current track
+- /s: Skips the current track
 - /pause: Pause track
 - /resume: Resumes the paused track
 - /end: Stops media playback
 - /current: Shows the current Playing track
-- /playlist: Shows playlist
+- /pl: Shows playlist
 
 *Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.
-""",
-        
-f"""
-**More features coming soon!**
 """,
 
 f"""
 **=>> More tools 🧑‍🔧**
 
-- /musicplayer [on/off]: Enable/Disable Music player
 - /admincache: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @KatarinaMusixUserbot Userbot to your chat
+- /userbotjoin: Invite Assistant to your chat.
 """
       ]
