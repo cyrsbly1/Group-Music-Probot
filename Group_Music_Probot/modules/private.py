@@ -10,7 +10,6 @@ GROUP_MUSIC_PROBOT_IMG = "https://telegra.ph/file/ed46a60b02aa042a092d2.png"
 
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
-    await message.reply_photo(GROUP_MUSIC_PROBOT_IMG)
     await message.reply_text(
         f"""Hey, I'm **Nezuko**. I'm Music Bot for Truthful Demons. Nice to meet you!
 Unfortunately, this bot is exclusive for Truthful Demons.
