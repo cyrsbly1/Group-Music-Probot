@@ -3,36 +3,18 @@ from Group_Music_Probot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SU
 
 class Messages():
       START_MSG = """
-Hey, I'm Katarina 🎵
-I can play music in your group's voice call. 
-Add me to your group and play music freely!
-
-Try the /help Command below to know my abilities.
+Hey, I'm **Nezuko**. I'm Music Bot for Truthful Demons. Nice to meet you!
+Unfortunately, this bot is exclusive for Truthful Demons.
 """
       
       HELP_MSG = [
         ".",
 f"""
-Hey, I'm Katarina 🎵
-I can play music in your group's voice call. 
-Add me to your group and play music freely!
-
-Try the /help Command below to know my abilities.
+Hey, I'm **Nezuko**. I'm Music Bot for Truthful Demons. Nice to meet you!
+Unfortunately, this bot is exclusive for Truthful Demons.
 """,
 
 f"""
-**Setting up**
-
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play [song name] for the first time by an admin
-*) If userbot joined enjoy music, If not add @KatarinaMusixUserbot to your group and retry
-
-**For Channel Music Play**
-1) Make me admin of your channel 
-2) Send /userbotjoinchannel in linked group
-3) Now send commands in linked group
-
 **Commands**
 
 **=>> Song Playing 🎧**
@@ -46,7 +28,7 @@ f"""
 **=>> Playback ⏯**
 
 - /player: Open Settings menu of player
-- /s: Skips the current track
+- /s: Skips the current track (unstable command)
 - /pause: Pause track
 - /resume: Resumes the paused track
 - /end: Stops media playback
