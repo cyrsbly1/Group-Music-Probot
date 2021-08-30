@@ -107,10 +107,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((205, 550), f"Title: {title}", (51, 215, 255), font=font)
     draw.text((205, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((205, 630), f"Bot by @ppnaravxt!", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Added By: {requested_by}", (255, 255, 255), font=font)
     draw.text(
         (205, 670),
-        f"Added By: {requested_by}",
+        f"Music Bot for Truthful Demons.",
         (255, 255, 255),
         font=font,
     )
@@ -157,9 +157,9 @@ def updated_stats(chat, queue, vol=100):
         if len(que) > 0:
             stats += "\n\n"
             stats += "Volume : {}%\n".format(vol)
-            stats += "Songs in queue : `{}`\n".format(len(que))
-            stats += "Now Playing : **{}**\n".format(queue[0][0])
-            stats += "Requested by : {}".format(queue[0][1].mention)
+            stats += "Now Playing : **{}**\n".format(len(que))
+            stats += "Requested by : {}".format(queue[0][0])
+            stats += "Music Bot for Truthful Demons.".format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -479,7 +479,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "Mga hampaslupa, dumating na ang inyong Reyna. Gamitin nag /p para mag-play ng music."
                     )
                     await lel.edit(
                         "<b>helper userbot joined your chat</b>",
@@ -498,7 +498,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /p command for first time or add {user.first_name} manually.</i>"
         )
         return
     text_links=None
@@ -587,8 +587,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu (Admins only) ", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
-                    InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
+                    InlineKeyboardButton(text="Bot by Mork.", url=f"https://t.me/saibuboo"),
                 ],
                 [
                     InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -674,8 +673,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("Menu (Admins only)", callback_data="menu"),
                     ],
                     [
-                        InlineKeyboardButton(text="Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
-                        InlineKeyboardButton(text="Owner", url=f"https://t.me/ppnaravxt"),
+                        InlineKeyboardButton(text="Bot by Mork.", url=f"https://t.me/saibuboo"),
                     ],
                     [
                         InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -763,7 +761,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "Mga hampaslupa, dumating na ang inyong Reyna. Gamitin nag /p para mag-play ng music."
                     )
                     await lel.edit(
                         "<b>Helper userbot joined your chat</b>",
@@ -824,8 +822,7 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [
-                 InlineKeyboardButton(text="Bot Updates", url=f"https://t.me/KatarinaMusicBotUpdates"),
-                 InlineKeyboardButton(text="Bot Owner", url=f"https://t.me/ppnaravxt"),
+                 InlineKeyboardButton(text="Bot by Mork.", url=f"https://t.me/saibuboo"),
             ],
             [
                 InlineKeyboardButton(text="❌ Close", callback_data="cls")
@@ -1060,7 +1057,7 @@ async def lol_cb(b, cb):
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("You ain't the person who requested to play the song!", show_alert=True)
+        await cb.answer("Luh? Pabida, ikaw ba nag-request? Gold ka ba?", show_alert=True)
         return
     await cb.message.edit("Processing...")
     x=int(x)
